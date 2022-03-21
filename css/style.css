@@ -5,7 +5,14 @@
 } 
 
 .wrapper{
-    height: 500px;
+    min-height: 500px;
     border: 1px solid black; 
     margin: 0 auto;
+} 
+
+.selection-contact, 
+.selection-chat{
+    width: 100%;
+    height: 70px;
+    background-color: yellow;
 }
