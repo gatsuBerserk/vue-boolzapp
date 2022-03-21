@@ -62,10 +62,6 @@
      list-style:none; 
      padding: 5px; 
  } 
- 
- /* .wrapper .user-chat{
-     overflow: hidden;
- } */
 
  .wrapper .user-chat ul li img{
      width: 70px;
@@ -80,8 +76,14 @@
  section#messages .text { 
      bottom: 1px; 
      width: 100%; 
-     background-color: rgb(243, 238, 234);
-     
+     background-color: rgb(243, 238, 234); 
+ } 
+
+ section#messages .message-written .send{
+     background-color: green;
+     border-radius: 10px; 
+     width: 40%;
+
  }
 
 

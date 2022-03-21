@@ -52,7 +52,7 @@
                             <ul class="p-0 ">
                                 <li class="d-flex justify-content-between mt-2" v-for="(element, index) in contacts ">
                                     <div class="info d-flex align-items-center"> 
-                                        <img src="img/avatar_2.jpg" alt=""> 
+                                        <img :src="`img/avatar${element.avatar}.jpg`" alt=""> 
                                         <div id="name" class="mx-2">
                                             <h5>{{element.name}}</h5> 
                                             <h6>Ultimo accesso</h6>
@@ -84,13 +84,23 @@
                                 </div>
                             </div> 
                         </div>
-                    <div class="text position-absolute start-50 translate-middle-x ">
-                        <div class="input-group input-group-sm p-2">
-                            <i class="fa-regular fa-face-laugh-squint mt-2 mx-4"></i>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi"> 
-                            <i class="fa-solid fa-microphone mt-2 mx-4"></i>
-                          </div>
-                    </div>
+                        <div class="text position-absolute start-50 translate-middle-x ">
+                            <div class="input-group input-group-sm p-2">
+                                <i class="fa-regular fa-face-laugh-squint mt-2 mx-4"></i>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi"> 
+                                <i class="fa-solid fa-microphone mt-2 mx-4"></i>
+                            </div>
+                        </div> 
+
+                        <div class="message-written d-flex justify-content-left flex-wrapp justify-content-end m-5" v-for="(element, index) in contacts.messages"> 
+                            <div class="send p-3">
+                                <h5>{{[index].message}}</h5>  
+                                <div class="ora text-end">
+                                <span>ora</span> 
+                            </div>
+                            </div> 
+                           
+                        </div>
                     
                     </div> 
                     
