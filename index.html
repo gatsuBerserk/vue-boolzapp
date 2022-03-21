@@ -45,8 +45,25 @@
                         <div class="search d-flex justify-content-center">
                             <div class="input-group my-search mb-3 pt-1">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-microscope"></i></span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="Trova" aria-label="Username" aria-describedby="basic-addon1">
                               </div>
+                        </div> 
+                        <div class="user-chat">
+                            <ul class="p-1">
+                                <li class="d-flex justify-content-between mt-2" v-for="(element, index) in contacts ">
+                                    <div class="info d-flex align-items-center"> 
+                                        <img src="img/avatar_2.jpg" alt=""> 
+                                        <div id="name" class="mx-2">
+                                            <h5>{{element.name}}</h5> 
+                                            <h6>Ultimo accesso</h6>
+                                        </div> 
+                                        
+                                    </div>
+                                    <div class="ora mx-4"> 
+                                            ora
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div> 
