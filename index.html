@@ -28,7 +28,7 @@
                                <h4>User Name</h4>
                             </div> 
                             <div class="option d-flex align-items-center">
-                                <i class="fa-solid fa-circle-notch me-3"></i>
+                                <i class="fa-solid fa-beer-mug-empty me-3"></i>
 								<i class="fa-regular fa-message me-3"></i>
 								<i class="fa-solid fa-ellipsis-vertical me-3"></i>
                             </div>
@@ -39,17 +39,17 @@
                             </div> 
                             <div class="receive pt-2">
                                 <h5>Ricevi notifiche</h5> 
-                                <a href="#">Disattiva Noti-fiche</a>
+                                <a href="#">Disattiva Notifiche</a>
                             </div>
                         </div> 
                         <div class="search d-flex justify-content-center">
-                            <div class="input-group my-search mb-3 pt-1">
+                            <div class="input-group mb-1 pt-1">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-microscope"></i></span>
                                 <input type="text" class="form-control" placeholder="Trova" aria-label="Username" aria-describedby="basic-addon1">
                               </div>
                         </div> 
                         <div class="user-chat">
-                            <ul class="p-1">
+                            <ul class="p-0 ">
                                 <li class="d-flex justify-content-between mt-2" v-for="(element, index) in contacts ">
                                     <div class="info d-flex align-items-center"> 
                                         <img src="img/avatar_2.jpg" alt=""> 
@@ -57,7 +57,6 @@
                                             <h5>{{element.name}}</h5> 
                                             <h6>Ultimo accesso</h6>
                                         </div> 
-                                        
                                     </div>
                                     <div class="ora mx-4"> 
                                             ora
@@ -68,7 +67,7 @@
                     </div>
                 </div> 
                 <section id="messages" class="col-7 p-0"> 
-                    <div class="wrapper-chat"> 
+                    <div class="wrapper-chat position-relative"> 
                         <div class="chat"> 
                             <div class="selection-chat  d-flex justify-content-between"> 
                                 <div class="selection-item d-flex align-items-center px-2 "> 
@@ -84,10 +83,18 @@
                                     <i class="fa-solid fa-ellipsis-vertical me-3"></i>
                                 </div>
                             </div> 
-                           
-
                         </div>
+                    <div class="text position-absolute start-50 translate-middle-x ">
+                        <div class="input-group input-group-sm p-2">
+                            <i class="fa-regular fa-face-laugh-squint mt-2 mx-4"></i>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi"> 
+                            <i class="fa-solid fa-microphone mt-2 mx-4"></i>
+                          </div>
                     </div>
+                    
+                    </div> 
+                    
+                    
                 </section>
             </div>
         </div>

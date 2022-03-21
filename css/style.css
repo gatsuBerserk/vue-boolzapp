@@ -7,7 +7,6 @@
 .wrapper, 
 .wrapper-chat{
     height: 900px;
-    border: 1px solid black; 
     margin: 0 auto; 
 } 
 
@@ -17,6 +16,10 @@
     height: 70px;
     background-color: rgb(234, 234, 234);
 } 
+
+.selection-contact{
+    border-right: 1px solid silver; 
+}
 .img-profile{
     height: 50px; 
     border-radius: 50%; 
@@ -57,13 +60,29 @@
  } 
  .wrapper .user-chat ul li{
      list-style:none; 
- }  
+     padding: 5px; 
+ } 
+ 
+ /* .wrapper .user-chat{
+     overflow: hidden;
+ } */
 
  .wrapper .user-chat ul li img{
      width: 70px;
      height: 70px; 
      border-radius: 50px;
- }  
+ } 
+ 
+ .user-chat ul li:hover{
+     background-color: rgb(197, 197, 197); 
+ } 
+
+ section#messages .text { 
+     bottom: 1px; 
+     width: 100%; 
+     background-color: rgb(243, 238, 234);
+     
+ }
 
 
 
