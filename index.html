@@ -24,8 +24,7 @@
                     <div class="wrapper"> 
                         <section class="selection-contact d-flex justify-content-between">
                             <div class="selection-item d-flex align-items-center px-2 "> 
-                                <i class="fa-regular fa-circle-user me-3 fs-1"></i>
-                               <!-- <img class="img-profile" src="img/user.png" alt="">  -->
+                               <img class="img-profile" src="img/avatar_1.jpg" alt=""> 
                                <h4>User Name</h4>
                             </div> 
                             <div class="option d-flex align-items-center">
@@ -33,30 +32,46 @@
 								<i class="fa-regular fa-message me-3"></i>
 								<i class="fa-solid fa-ellipsis-vertical me-3"></i>
                             </div>
-
-                        </section>
+                        </section> 
+                        <div class="notifications d-flex align-items-center"> 
+                            <div class="campanella d-flex align-items-center justify-content-center mx-3">
+                                <i class="fa-solid fa-bell-slash fs-2"></i>
+                            </div> 
+                            <div class="receive pt-2">
+                                <h5>Ricevi notifiche</h5> 
+                                <a href="#">Disattiva Noti-fiche</a>
+                            </div>
+                        </div> 
+                        <div class="search d-flex justify-content-center">
+                            <div class="input-group my-search mb-3 pt-1">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-microscope"></i></span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+                        </div>
                     </div>
                 </div> 
-                <div id="messages" class="col-7 p-0"> 
-                    <div class="wrapper"> 
-                        <section class="chat"> 
-                            <section class="selection-chat  d-flex justify-content-between"> 
+                <section id="messages" class="col-7 p-0"> 
+                    <div class="wrapper-chat"> 
+                        <div class="chat"> 
+                            <div class="selection-chat  d-flex justify-content-between"> 
                                 <div class="selection-item d-flex align-items-center px-2 "> 
-                                    <i class="fa-regular fa-circle-user me-3 fs-1"></i>
-                                    <!-- <img class="img-profile" src="img/user.png" alt="">  -->
-                                    <h4>User Name</h4>
+                                    <img class="img-profile" src="img/avatar_1.jpg" alt=""> 
+                                    <div class="info mt-3"> 
+                                        <h4>User Name</h4> 
+                                        <p>Ultimo accesso</p> 
+                                    </div> 
                                  </div> 
                                  <div class="option d-flex align-items-center">
                                     <i class="fa-solid fa-microscope me-3"></i>
                                     <i class="fa-solid fa-paperclip me-3"></i>
                                     <i class="fa-solid fa-ellipsis-vertical me-3"></i>
-                                 </div>
+                                </div>
+                            </div> 
+                           
 
-                            </section>
-
-                        </section>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </main>
