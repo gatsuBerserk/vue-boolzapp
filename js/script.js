@@ -7,12 +7,13 @@
 const app = new Vue( 
     {
         el : "#app",
-        data : {
+        data : { 
+             
             contacts: [
                 {
                     name: 'Michele',
                     avatar: '_1',
-                    visible: true, 
+                    visible: false, 
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -172,7 +173,17 @@ const app = new Vue(
                     ],
                 }, 
                  
-            ]
+            ],  
+            activeElement : null, 
+        }, 
+       
+        methods:{
+            /**
+             * Prendo l'indice con il click su HTML e lo passo ad activeElement in modo tale da attivare la classe che serve
+             */  
+            add : function(index){
+                this.activeElement=index;  
+            }
         }, 
         
 }) 

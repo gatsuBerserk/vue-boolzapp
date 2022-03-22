@@ -68,10 +68,16 @@
      height: 70px; 
      border-radius: 50px;
  } 
- 
+ .wrapper div.user-chat{
+     overflow-y: scroll; 
+     height: calc(100% - 70px - 80px - 46px);
+ }
  .user-chat ul li:hover{
      background-color: rgb(197, 197, 197); 
- } 
+ }  
+ .active{
+     background-color: greenyellow;
+ }
 
  section#messages .text { 
      bottom: 1px; 

@@ -22,6 +22,7 @@
             <div class="row justify-content-center">
                 <div class="col-3 p-0">
                     <div class="wrapper"> 
+                         <!--personal profile  -->
                         <section class="selection-contact d-flex justify-content-between">
                             <div class="selection-item d-flex align-items-center px-2 "> 
                                <img class="img-profile" src="img/avatar_1.jpg" alt=""> 
@@ -41,16 +42,18 @@
                                 <h5>Ricevi notifiche</h5> 
                                 <a href="#">Disattiva Notifiche</a>
                             </div>
-                        </div> 
+                        </div>  
+                        <!-- Search -->
                         <div class="search d-flex justify-content-center">
                             <div class="input-group mb-1 pt-1">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-microscope"></i></span>
                                 <input type="text" class="form-control" placeholder="Trova" aria-label="Username" aria-describedby="basic-addon1">
                               </div>
                         </div> 
+                         <!--Contacts  -->
                         <div class="user-chat">
                             <ul class="p-0 ">
-                                <li class="d-flex justify-content-between mt-2" v-for="(element, index) in contacts ">
+                                <li class="d-flex justify-content-between mt-2"  v-for="(element, index) in contacts" @click="add(index)" :class="{'active' : activeElement == index}"  >
                                     <div class="info d-flex align-items-center"> 
                                         <img :src="`img/avatar${element.avatar}.jpg`" alt=""> 
                                         <div id="name" class="mx-2">
@@ -65,7 +68,8 @@
                             </ul>
                         </div>
                     </div>
-                </div> 
+                </div>  
+                <!-- selected profile -->
                 <section id="messages" class="col-7 p-0"> 
                     <div class="wrapper-chat position-relative"> 
                         <div class="chat"> 
@@ -84,6 +88,7 @@
                                 </div>
                             </div> 
                         </div>
+                        <!-- input text -->
                         <div class="text position-absolute start-50 translate-middle-x ">
                             <div class="input-group input-group-sm p-2">
                                 <i class="fa-regular fa-face-laugh-squint mt-2 mx-4"></i>
@@ -91,10 +96,10 @@
                                 <i class="fa-solid fa-microphone mt-2 mx-4"></i>
                             </div>
                         </div> 
-
-                        <div class="message-written d-flex justify-content-left flex-wrapp justify-content-end m-5" v-for="(element, index) in contacts.messages"> 
+                        <!-- message -->
+                        <div class="message-written d-flex justify-content-left flex-wrapp justify-content-end m-5"> 
                             <div class="send p-3">
-                                <h5>{{[index].message}}</h5>  
+                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores neque et nobis iure veniam ipsam voluptates, expedita iusto, totam nemo? Ullam sed facilis voluptatem necessitatibus numquam unde animi perspiciatis!</h5>  
                                 <div class="ora text-end">
                                 <span>ora</span> 
                             </div>
