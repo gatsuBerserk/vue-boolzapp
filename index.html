@@ -25,8 +25,8 @@
                          <!--personal profile  -->
                         <section class="selection-contact d-flex justify-content-between">
                             <div class="selection-item d-flex align-items-center px-2 "> 
-                               <img class="img-profile" src="img/avatar_1.jpg" alt=""> 
-                               <h4>User Name</h4>
+                               <img class="img-profile" src="img/logo2.png" alt=""> 
+                               <h4>Carmine Passante</h4>
                             </div> 
                             <div class="option d-flex align-items-center">
                                 <i class="fa-solid fa-beer-mug-empty me-3"></i>
@@ -73,13 +73,14 @@
                 <section id="messages" class="col-7 p-0"> 
                     <div class="wrapper-chat position-relative"> 
                         <div class="chat"> 
-                            <div class="selection-chat  d-flex justify-content-between"> 
-                                <div class="selection-item d-flex align-items-center px-2 "> 
-                                    <img class="img-profile" src="img/avatar_1.jpg" alt=""> 
+                            <div class="selection-chat  d-flex justify-content-between">
+                                 <!--Aggiungungo immagine dinamincamente anche alle sezioine attiva -->
+                                <div class="selection-item d-flex align-items-center px-2" v-for="(element, index) in contacts" v-if="index == activeElement"> 
+                                    <img class="img-profile" :src="`img/avatar${element.avatar}.jpg`" alt=""> 
                                     <div class="info mt-3"> 
-                                        <h4>User Name</h4> 
+                                        <h4>{{element.name}}</h4> 
                                         <p>Ultimo accesso</p> 
-                                    </div> 
+                                    </div>  
                                  </div> 
                                  <div class="option d-flex align-items-center">
                                     <i class="fa-solid fa-microscope me-3"></i>
@@ -97,7 +98,7 @@
                             </div>
                         </div> 
                         <!-- message -->
-                        <div class="message-written d-flex justify-content-left flex-wrapp justify-content-end m-5"> 
+                        <div class="message-written d-flex justify-content-left flex-wrapp justify-content-end m-5" v-for="()"> 
                             <div class="send p-3">
                                 <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores neque et nobis iure veniam ipsam voluptates, expedita iusto, totam nemo? Ullam sed facilis voluptatem necessitatibus numquam unde animi perspiciatis!</h5>  
                                 <div class="ora text-end">
