@@ -89,30 +89,31 @@
                                 </div>
                             </div> 
                         </div>
-                        <!-- input text -->
-                        <div class="text position-absolute start-50 translate-middle-x ">
-                            <div class="input-group input-group-sm p-2">
-                                <i class="fa-regular fa-face-laugh-squint mt-2 mx-4"></i>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi"> 
-                                <i class="fa-solid fa-microphone mt-2 mx-4"></i>
-                            </div>
-                        </div> 
+                        
                         <!-- message -->
                         <div class="message-written d-flex flex-column align-items-end m-5"> 
                             <div class="send p-3 m-2" v-for="(element,index) in contacts[activeElement].messages" v-if="contacts[activeElement].messages[index].status == 'sent'" >
-                                <h5 class="d-block"  >{{element.message}}</h5>  
+                                <h5 class="d-block"  >{{contacts[activeElement].messages[index].message}}</h5>  
                                 <div class="ora text-end">
                                     <span>{{element.date}}</span> 
                                 </div>
                             </div> 
                            
                         </div>
-                    <div class="received p-3 m-2"v-for="(element,index) in contacts[activeElement].messages"  v-if="contacts[activeElement].messages[index].status == 'received'">
-                            <h5 >{{element.message}}</h5>
+                        <div class="received p-3 m-2"v-for="(element,index) in contacts[activeElement].messages"  v-if="contacts[activeElement].messages[index].status == 'received'">
+                            <h5 >{{contacts[activeElement].messages[index].message}}</h5>
                             <div class="ora text-end">
                                 <span>{{element.date}}</span> 
                             </div>
-                    </div> 
+                        </div>
+                    <!-- input text -->
+                    <div class="text position-absolute start-50 translate-middle-x ">
+                        <div class="input-group input-group-sm p-2">
+                            <i class="fa-regular fa-face-laugh-squint mt-2 mx-4"></i>
+                            <input v-model="sendMessage" @keyup.enter="utentMessage(activeElement, sendMessage)" type="text" class="form-control "  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi"> 
+                            <i class="fa-solid fa-microphone mt-2 mx-4"></i>
+                        </div>
+                    </div>  
                     
                     
                 </section>

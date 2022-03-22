@@ -8,12 +8,13 @@ const app = new Vue(
     {
         el : "#app",
         data : { 
-            activeElement : 0, 
+            activeElement : 0,  
+            sendMessage:"", 
             contacts: [
                 {
                     name: 'Michele',
                     avatar: '_1',
-                    visible: false, 
+                    visible: false,  
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -183,7 +184,17 @@ const app = new Vue(
              */  
             add : function(index){
                 this.activeElement=index;  
-            }
-        }, 
+            },   
+            utentMessage: function(activeElement, string){
+                const newMessage = {};
+                newMessage.date = "";
+                newMessage.message = string;
+                newMessage.status = 'sent';
+                this.contacts[activeElement].messages.push(newMessage);
+                this.sendMessage = '';
+            },
+                    
+         
+    }
         
 }) 
