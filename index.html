@@ -98,16 +98,20 @@
                             </div>
                         </div> 
                         <!-- message -->
-                        <div class="message-written d-flex justify-content-left flex-wrapp justify-content-end m-5" v-for="()"> 
-                            <div class="send p-3">
-                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores neque et nobis iure veniam ipsam voluptates, expedita iusto, totam nemo? Ullam sed facilis voluptatem necessitatibus numquam unde animi perspiciatis!</h5>  
+                        <div class="message-written d-flex flex-column align-items-end m-5"> 
+                            <div class="send p-3 m-2" v-for="(element,index) in contacts[activeElement].messages" v-if="contacts[activeElement].messages[index].status == 'sent'" >
+                                <h5 class="d-block"  >{{element.message}}</h5>  
                                 <div class="ora text-end">
-                                <span>ora</span> 
-                            </div>
+                                    <span>{{element.date}}</span> 
+                                </div>
                             </div> 
                            
                         </div>
-                    
+                    <div class="received p-3 m-2"v-for="(element,index) in contacts[activeElement].messages"  v-if="contacts[activeElement].messages[index].status == 'received'">
+                            <h5 >{{element.message}}</h5>
+                            <div class="ora text-end">
+                                <span>{{element.date}}</span> 
+                            </div>
                     </div> 
                     
                     
