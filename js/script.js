@@ -217,10 +217,17 @@ const app = new Vue(
                 }
             },  
             // funzione cerca 
-            /**
-             * creaimo la variabile da associare all'input -------> done
-             */
-        }
             
+            /**
+             * creaimo la variabile da associare all'input -------> done 
+             * cicliamo sull'array di ogetti, ma a noi serve solo il primo object perche le informazioni che ci interessano sono li.
+             */ 
+            searchContact(){ 
+                // controllo se funziona
+                console.log(this.search);
+               
+        },  
+    }
+           
         
 })  

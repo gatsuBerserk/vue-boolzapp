@@ -47,7 +47,7 @@
                         <div class="search d-flex justify-content-center">
                             <div class="input-group mb-1 pt-1">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-microscope"></i></span>
-                                <input type="text" class="form-control" v-model="search" placeholder="Trova" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" v-model="search" @keypress.enter="searchContact()" placeholder="Trova" aria-label="Username" aria-describedby="basic-addon1">
                               </div>
                         </div> 
                          <!--Contacts  -->
