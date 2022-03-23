@@ -184,13 +184,22 @@ const app = new Vue(
              */  
             add : function(index){
                 this.activeElement=index;  
-            },   
-            utentMessage: function(activeElement, string){
-                const newMessage = {};
-                newMessage.date = "";
-                newMessage.message = string;
-                newMessage.status = 'sent';
-                this.contacts[activeElement].messages.push(newMessage);
+            }, 
+            /**
+             * 
+             * @param {*} activeElement elemento attivo
+             * @param {*} string messaggio da inviare
+             */   
+            utentMessage: function(activeElement, string){ 
+                // creiamo un nuovo oggetto
+                const newMessage = { 
+                    date: '10/01/2020 15:51:00',
+                    message: string,
+                    status: 'sent'
+                };
+                // insieriamo il nuovo messaggio nell'oggetto messages
+                this.contacts[activeElement].messages.push(newMessage); 
+                // puliamo il campo input dopo aver inviato il messaggio
                 this.sendMessage = '';
             },
                     

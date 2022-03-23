@@ -92,19 +92,12 @@
                         
                         <!-- message -->
                         <div class="message-written d-flex flex-column align-items-end m-5"> 
-                            <div class="send p-3 m-2" v-for="(element,index) in contacts[activeElement].messages" v-if="contacts[activeElement].messages[index].status == 'sent'" >
-                                <h5 class="d-block"  >{{contacts[activeElement].messages[index].message}}</h5>  
+                            <div class="p-3 m-2" v-for="(element,index) in contacts[activeElement].messages" :class="(contacts[activeElement].messages[index].status == 'sent') ? 'sent' : 'received'" >
+                                <h5 >{{contacts[activeElement].messages[index].message}}</h5>  
                                 <div class="ora text-end">
                                     <span>{{element.date}}</span> 
                                 </div>
                             </div> 
-                           
-                        </div>
-                        <div class="received p-3 m-2"v-for="(element,index) in contacts[activeElement].messages"  v-if="contacts[activeElement].messages[index].status == 'received'">
-                            <h5 >{{contacts[activeElement].messages[index].message}}</h5>
-                            <div class="ora text-end">
-                                <span>{{element.date}}</span> 
-                            </div>
                         </div>
                     <!-- input text -->
                     <div class="text position-absolute start-50 translate-middle-x ">
