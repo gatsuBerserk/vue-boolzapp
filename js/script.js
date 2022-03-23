@@ -10,6 +10,7 @@ const app = new Vue(
         data : { 
             activeElement : 0,  
             sendMessage:"", 
+            check: false, 
             contacts: [
                 {
                     name: 'Michele',
@@ -201,6 +202,18 @@ const app = new Vue(
                 this.contacts[activeElement].messages.push(newMessage); 
                 // puliamo il campo input dopo aver inviato il messaggio
                 this.sendMessage = '';
+            }, 
+            autoMessage: function(){
+                if(this.check == false){
+                    setTimeout(()=>{
+                        const newMessage = {
+                            date: '10/01/2020 15:51:00',
+                            message: 'OK!!',
+                            status: 'received'};
+                            
+                        this.contacts[this.activeElement].messages.push(newMessage);
+                    }, 1000)
+                }
             },
                     
          

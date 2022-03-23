@@ -82,7 +82,7 @@
      bottom: 1px; 
      width: 100%; 
      background-color: rgb(243, 238, 234); 
- } 
+ }  
 
  section#messages .message-written .sent{
      background-color: rgb(20, 192, 20);
