@@ -11,12 +11,12 @@ const app = new Vue(
             activeElement : 0,  
             sendMessage:"", 
             check: false,
-            search: "", 
+            search: "",   
             contacts: [
                 {
                     name: 'Michele',
                     avatar: '_1',
-                    visible: false,  
+                    visible: true,  
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -221,11 +221,17 @@ const app = new Vue(
             /**
              * creaimo la variabile da associare all'input -------> done 
              * cicliamo sull'array di ogetti, ma a noi serve solo il primo object perche le informazioni che ci interessano sono li.
-             */ 
-            searchContact(){ 
-                // controllo se funziona
-                console.log(this.search);
-               
+             * 
+             */  
+        searchContact(){ 
+            // Se search non è vuoto
+            if(this.search.trim() != ''){
+                this.contacts.forEach( (element) => {
+                    element.visible = element.name.toLowerCase().includes(this.search.trim().toLowerCase()); 
+                })
+            } 
+            // Brutal Force
+            this.search="";
         },  
     }
            

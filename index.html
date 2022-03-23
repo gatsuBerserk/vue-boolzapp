@@ -53,7 +53,7 @@
                          <!--Contacts  -->
                         <div class="user-chat">
                             <ul class="p-0 ">
-                                <li class="d-flex justify-content-between mt-2"  v-for="(element, index) in contacts" @click="add(index)" :class="{'active' : activeElement == index}"  >
+                                <li class="d-flex justify-content-between mt-2"  v-for="(element, index) in contacts" @click="add(index)" :class="{'active' : activeElement == index}" v-if="element.visible">
                                     <div class="info d-flex align-items-center"> 
                                         <img :src="`img/avatar${element.avatar}.jpg`" alt=""> 
                                         <div id="name" class="mx-2">
