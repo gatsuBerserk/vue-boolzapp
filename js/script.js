@@ -10,7 +10,8 @@ const app = new Vue(
         data : { 
             activeElement : 0,  
             sendMessage:"", 
-            check: false, 
+            check: false,
+            search: "", 
             contacts: [
                 {
                     name: 'Michele',
@@ -177,8 +178,8 @@ const app = new Vue(
                  
             ],  
             
-        }, 
-       
+        },
+        
         methods:{
             /**
              * Prendo l'indice con il click su HTML e lo passo ad activeElement in modo tale da attivare la classe che serve
@@ -194,7 +195,7 @@ const app = new Vue(
             utentMessage: function(activeElement, string){ 
                 // creiamo un nuovo oggetto
                 const newMessage = { 
-                    date: '10/01/2020 15:51:00',
+                    date:dayjs().format('DD-MM-YYYY') + ' ' + dayjs().format('hh') + ':' + dayjs().format('mm') + ':' + dayjs().format('ss'),
                     message: string,
                     status: 'sent'
                 };
@@ -207,16 +208,19 @@ const app = new Vue(
                 if(this.check == false){
                     setTimeout(()=>{
                         const newMessage = {
-                            date: '10/01/2020 15:51:00',
+                            date: dayjs().format('DD-MM-YYYY') + ' ' + dayjs().format('hh') + ':' + dayjs().format('mm') + ':' + dayjs().format('ss'),
                             message: 'OK!!',
                             status: 'received'};
                             
                         this.contacts[this.activeElement].messages.push(newMessage);
                     }, 1000)
                 }
-            },
-                    
-         
-    }
+            },  
+            // funzione cerca 
+            /**
+             * creaimo la variabile da associare all'input -------> done
+             */
+        }
+            
         
-}) 
+})  
