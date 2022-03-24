@@ -8,8 +8,7 @@ const app = new Vue(
     {
         el : "#app",
         data : { 
-            activeElement : 0,  
-            sendMessage:"", 
+            activeElement : 0,   
             check: false,
             search: "",   
             contacts: [

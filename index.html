@@ -87,7 +87,8 @@
                                     <i class="fa-solid fa-paperclip me-3"></i>
                                     <i class="fa-solid fa-ellipsis-vertical me-3"></i>
                                 </div>
-                            </div> 
+                            </div>
+                        </div>
                             <!-- message -->
                             <div class="message-written d-flex flex-column align-items-end m-5"> 
                                 <div class="p-3 m-2" v-for="(element,index) in contacts[activeElement].messages" :class="(contacts[activeElement].messages[index].status == 'sent') ? 'sent' : 'received'" >
@@ -97,7 +98,7 @@
                                     </div>
                                 </div> 
                             </div>
-                            <!-- input text -->
+                            <!-- input text --> 
                             <div class="text position-absolute start-50 translate-middle-x ">
                                 <div class="input-group input-group-sm p-2">
                                     <i class="fa-regular fa-face-laugh-squint mt-2 mx-4"></i>
@@ -105,7 +106,7 @@
                                     <i class="fa-solid fa-microphone mt-2 mx-4"></i>
                                 </div>
                             </div>  
-                        </div>
+                    </div>    
                 </section>
             </div>
         </div>
