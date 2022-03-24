@@ -221,7 +221,10 @@ const app = new Vue(
             // Se search non è vuoto
             if(this.search.trim() != ''){
                 this.contacts.forEach( (element) => {
-                    element.visible = element.name.toLowerCase().includes(this.search.trim().toLowerCase()); 
+                    // element.visible = element.name.toLowerCase().includes(this.search.trim().toLowerCase()); 
+                    
+                    // Soluzioine alternativa. Con startWith cerchiamo  la prima lettera  
+                    element.visible = element.name.toLowerCase().startsWith(this.search.trim().toLowerCase()); 
                 })
             } 
             // Brutal Force
