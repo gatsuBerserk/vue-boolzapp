@@ -4,7 +4,8 @@ const app = new Vue(
         el : "#app",
         data : { 
             activeElement : 0,   
-            check: false,
+            check: false, 
+            sendMessage:"",
             search: "",   
             contacts: [
                 {
